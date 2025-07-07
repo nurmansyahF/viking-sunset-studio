@@ -4,10 +4,7 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          intrumentsans: ["Instrument Sans Condensed", "sans-serif"],
-          intrumentserif: ["Instrument Serif ", "sans-serif"],
-          geist: ["Geist Mono", "sans-serif"],
-          anton: ["Anton", "sans-serif"],
+          geist: ["Geist", "sans-serif"],
         },
         colors: {
             primary: "#E64351",

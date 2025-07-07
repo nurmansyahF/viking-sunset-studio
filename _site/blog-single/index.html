@@ -7,114 +7,79 @@
   <title>Blog - Viking Sunset Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist+Mono:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75,400..700;1,75,400..700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geist+Mono:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75,400..700;1,75,400..700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.css" integrity="sha512-NDcw4w5Uk5nra1mdgmYYbghnm2azNRbxeI63fd3Zw72aYzFYdBGgODILLl1tHZezbC8Kep/Ep/civILr5nd1Qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
     <link href="../main.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=39" rel="stylesheet">
   
 </head>
 <body class="font-geist">
   
-    <header id="header-nav" class="header header-alt sticky top-0 right-0 pt-4 pb-4 w-full z-[999]">
-  <div class="container-fluid flex flex-wrap justify-between items-start mx-auto p-[5px]">
-    <a class="web-logo mt-[-26px]" href="../">
-      <img src="../assets/images/logo-vss.svg" alt="logo-vss" class="w-[205px]">
-    </a>
-    <div class="main-menu text-white font-semibold">
-      <!-- <div class="lang">
-        <span class="active">EN</span>
-        <a href="#">ID</a>
-      </div> -->
-      <nav class="nav-main flex flex-col mt-[-24px]">
-        <a href="../about" class="">
-          <small>01</small>
-          <span>About</span>
-        </a>
-        <a href="../our-work" class="">
-          <small>02</small>
-          <span>Our Work</span>
-        </a>
-        <a href="../services" class="">
-          <small>03</small>
-          <span>Services</span>
-        </a>
-        <a href="../equipment" class="">
-          <small>04</small>
-          <span>Equipment</span>
-        </a>
-        <a href="../film-fund" class="">
-          <small>05</small>
-          <span>Viking Film Fund</span>
-        </a>
-        <a href="../blog" class="active">
-          <small>06</small>
-          <span>Blog</span>
-        </a>
-      </nav>
-      <!-- <a href="mailto:info@vikingsunsetstudios.com" target="_blank" class="btn-primary py-1 px-[12px] bg-primary border-1 border-[#FFF] text-white inline-block transition duration-300 ease-in-out hover:scale-[1.02]">Let’s Talk</a> -->
-    </div>      
-  </div>
-  <div class="container-fluid flex flex-wrap justify-between items-start mx-auto p-[5px] showrow">
+    <header id="header-nav" class="header fixed top-0 right-0 w-full z-[999]">
+  <div class="container-fluid mx-auto flex flex-wrap items-center showrow">
     <a class="web-logo" href="../">
       <img src="../assets/images/logo-vss.svg" alt="logo-vss" class="w-[205px]">
     </a>
     <div class="main-menu text-white font-semibold">
-      <!-- <div class="lang">
-        <span class="active">EN</span>
-        <a href="#">ID</a>
-      </div> -->
-      <nav class="nav-main flex flex-col">
+      <div class="mainmenu-top flex-wrap w-full justify-between">
+        <div class="lang">
+          <a href="#" class="active">EN</a>
+          <a href="#" >ID</a>
+        </div>
+        <div class="sosmed">
+          <span>Follow us:</span>
+          <a href="https://www.instagram.com/vikingsunsetstudios/">INSTAGRAM</a>
+          <a href="https://www.youtube.com/channel/UCNaGh98m--hX6S869AJL3JQ">YOUTUBE</a>
+        </div>
+      </div>
+      <nav class="nav-main flex">
         <a href="../about" class="">
-          <small>01</small>
           <span>About</span>
         </a>
         <a href="../our-work" class="">
-          <small>02</small>
           <span>Our Work</span>
         </a>
         <a href="../services" class="">
-          <small>03</small>
           <span>Services</span>
         </a>
         <a href="../equipment" class="">
-          <small>04</small>
           <span>Equipment</span>
         </a>
         <a href="../film-fund" class="">
-          <small>05</small>
           <span>Viking Film Fund</span>
         </a>
         <a href="../blog" class="active">
-          <small>06</small>
           <span>Blog</span>
         </a>
       </nav>
       <a href="mailto:info@vikingsunsetstudios.com" target="_blank" class="btn-primary py-1 px-[12px] bg-primary border-1 border-[#FFF] text-white inline-block transition duration-300 ease-in-out hover:scale-[1.02] font-medium">Let’s Talk</a>
-    </div>      
+    </div>  
   </div>
-  
 </header>
   
   <main>
     
 <section id="section1" class="about-masthead relative w-full h-[100vh] md:max-h-[800px] bg-[#211C1C]">
-    <div class="container-fluid w-full h-[100vh] md:max-h-[800px] relative z-3 py-6 flex flex-col flex-wrap justify-end">
-        <div class="content text-white px-5 w-full z-20 relative">
+    <div class="container mx-auto w-full h-[100vh] md:max-h-[800px] relative z-3 py-6 flex flex-col flex-wrap justify-end">
+        <div class="content text-white px-5 w-full z-20 relative">            
+            <a href="../our-work/" class="btn-back text-xl font-semibold leading-[1.2em] tracking-[-0.04em] text-primary mb-10 block max-w-[max-content]">[ Back to  blog index]</a>
+            <div class="lg:max-w-[800px]">
+                <h1 class="font-intrumentsans font-semibold md:text-[72px] text-5xl tracking-[-0.04em]  leading-[1.1] mb-4">Viking Sunset Studios from Bali to Shine at the 77th Festival De Cannes</h1>
+            </div>       
             <div class="meta meta font-intrumentsans text-white font-semibold lg:mb-[152px]">
                 [May 16, 2024]
-            </div>
-            <div class="lg:max-w-[800px]">
-                <h1 class="font-intrumentsans font-semibold md:text-80 text-5xl tracking-[-0.04em] md:indent-[100px] leading-[1.1] mb-4">Viking Sunset Studios from Bali to Shine at the 77th Festival De Cannes</h1>
-            </div>            
+            </div>     
         </div>  
+        <div class="box-video absolute right-0 bottom-0 w-full md:w-7/12 lg:max-w-[700px]  h-full max-h-[480px] m-auto object-cover">
+            <img class="thumbnail-img w-full h-full max-h-[800px] object-cover" src="../assets/images/blog-thumbnail-1.jpg" alt="thumbnail-masthead">
+        </div>
     </div>
-    <div href="https://youtu.be/sDz5ypbxEiE?si=JkoLZKo4Utel_IDc" class="box-video absolute right-0 bottom-0 w-full md:w-7/12 lg:max-w-[800px]  h-full max-h-[480px] m-auto object-cover" data-lity>
-        <img class="thumbnail-img w-full h-full max-h-[800px] object-cover" src="../assets/images/blog-thumbnail-1.jpg" alt="thumbnail-masthead">
-    </div>
+    
 </section>
 
 <section class="single-blog-content py-40 bg-[#211C1C] border-b border-[#FF7324]">
@@ -195,7 +160,7 @@
 <div id="cursor-text">DRAG THIS</div>
 <section class="homepage-letstalk bg-white p-5">
 
-  <div class="container-fluid bg-[#E64351]">
+  <div class="container-fluid mx-auto bg-[#E64351]">
   <div class="container mx-auto py-[120px] text-white">
       <div class="md:max-w-[47.2222dvw] mx-auto">
       <h2 class="text-center md:text-[3.47vw] text-2xl px-6 font-intrumentsans leading-[1.1] font-semibold tracking-[-0.06em] mb-[16px]">Where Global Productions Come to Life
@@ -214,6 +179,7 @@
 
 </section>
 <footer>
+  <div class="container mx-auto">
     <div class="footer-top py-[60px] md:mb-20">
       <div class="footer-locations px-5">
         <a href="https://maps.app.goo.gl/y8fAa9DE999CrThm6" target="_blank" class="foot-loct flex gap-4 justify-between">
@@ -249,7 +215,7 @@
           <h3 class="text-2xl font-intrumentsans font-semibold mb-4 tracking-[-0.04em] leading-[1.1] text-[#211C1C]">Beyond Studios. Beyond Expectations. Technical Excellence, Creative Freedom Where Innovation Meets Creation Setting New Standards in Production</h3>
         </div>
         <div class="right flex gap-10">
-          <div class="min-w-[200px]">
+          <div class="md:min-w-[200px] w-5/12">
             <ul class="socmed uppercase font-semibold md:text-right">
               <li>
                 <a href="about" targe="_blank" class="hover:text-[#E64351]">about</a>
@@ -271,7 +237,7 @@
               </li>
             </ul>
           </div>
-          <div class="min-w-[200px]">
+          <div class="md:min-w-[200px] w-5/12">
             <ul class="socmed uppercase font-semibold md:text-right">
               <li>
                 <a href="https://www.linkedin.com/company/viking-sunset-studios/?viewAsMember=true" targe="_blank" class="hover:text-[#E64351]">LinkedIn</a>
@@ -301,13 +267,15 @@
             Viking Sunset Studios ©2025. all rights reserved 
           </div>
         </div>
-        <div class="right font-semibold flex justify-end items-center gap-2">
+        <!-- <div class="right font-semibold flex justify-end items-center gap-2">
           <a href="#" class="disabled pointer-events-none">Terms of service</a>
           <a href="#" class="disabled pointer-events-none">Privacy Policy</a>
-        </div>
+        </div> -->
       </div>
     </div>
-  </footer>
+  </div>
+    
+</footer>
   <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
   <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
@@ -318,7 +286,7 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             
-    <script src="../assets/scripts/main.js?v=28"></script>
+    <script src="../assets/scripts/main.js?v=39"></script>
   
 </body>
 </html>

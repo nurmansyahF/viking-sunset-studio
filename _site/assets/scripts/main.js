@@ -49,6 +49,14 @@ $(document).ready(function() {
       lastScroll = scrollPos;
     });
 
+    $('.burgermenu').each(function(){
+      var t = $(this);
+      t.on('click', function(){
+        $('body').toggleClass('menu-show')
+      })
+    })
+
+
     let counted = false;
     function isInViewport(element) {
       const rect = element[0].getBoundingClientRect();
@@ -109,6 +117,14 @@ $(document).ready(function() {
       initialSlide: 2,
       spaceBetween: 24,
       centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 2
+        },
+        1025: {
+          slidesPerView: 'auto'
+        }
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -117,6 +133,17 @@ $(document).ready(function() {
     const ldSwiper = new Swiper(".ldSwiper", {
       slidesPerView: 1.2,
       spaceBetween: 40,
+      breakpoints: {
+        0: {
+          spaceBetween: 16,
+        },
+        501: {
+          spaceBetween: 24,
+        },
+        1025: {
+          spaceBetween: 40,
+        }
+      },
       navigation: {
         nextEl: ".ld-button-next",
         prevEl: ".ld-button-prev",
@@ -306,11 +333,11 @@ $(document).ready(function() {
       });
     });
 
-    $('.homepage-location .location-item').each(function(){
+    $('.home-location .pointing').each(function(){
       const t = $(this);
       t.on('click', function(){
       const locationId = $(this).data('target');
-        $('#' + locationId).removeClass('hidden');
+        $('#' + locationId).addClass('active');
         $('html').addClass('popup-show');
         $('.header').hide();
       })
@@ -319,7 +346,7 @@ $(document).ready(function() {
       const t = $(this)
       const bb = $(this).find('.btn-back');
       bb.on('click', function(){
-        t.addClass('hidden')
+        t.removeClass('active')
         $('html').removeClass('popup-show');
         $('.header').show();
       })
@@ -430,39 +457,141 @@ $(document).ready(function() {
     //   $('#cursor-text').hide();
     // });
 
-    $('.homepage-location').on('mousemove', function(e) {
-      $('#cursor-text')
-        .css({
-          top: e.pageY + 10 + 'px',
-          left: e.pageX + 10 + 'px',
-          display: 'block'
-        }).html('See details');
+    $('.homepage+-location').on('mousemove', function(e) {
+      const cursorText = $('#cursor-text');
+      const cursorWidth = cursorText.outerWidth();
+      const cursorHeight = cursorText.outerHeight();
+      const pageWidth = $(window).width();
+      const pageHeight = $(window).height();
+
+      const offset = 0; // sedikit jarak dari kursor
+      let left = e.pageX + offset;
+      let top = e.pageY + offset; // default: di bawah kursor
+
+      // Jika terlalu dekat ujung kanan layar, geser tooltip ke kiri dari kursor
+      if (e.pageX + cursorWidth + offset > pageWidth) {
+        left = e.pageX - cursorWidth - offset;
+      }
+
+      // Jika terlalu dekat ujung bawah layar, tampilkan di atas kursor
+      if (e.pageY + cursorHeight + offset > pageHeight) {
+        top = e.pageY - cursorHeight - offset + 50;
+      }
+
+      cursorText.css({
+        top: top + 'px',
+        left: left + 'px',
+        display: 'block'
+      }).html('See details');
     });
     $('.homepage-location').on('mouseleave', function() {
       $('#cursor-text').hide();
     });
 
+    // $('.foot-loct').on('mousemove', function(e) {
+    //   $('#cursor-text')
+    //     .css({
+    //       top: e.pageY + 10 + 'px',
+    //       left: e.pageX + 10 + 'px',
+    //       display: 'block'
+    //     }).html('See maps');
+    // });
+    // $('.foot-loct').on('mouseleave', function() {
+    //   $('#cursor-text').hide();
+    // });
     $('.foot-loct').on('mousemove', function(e) {
-      $('#cursor-text')
-        .css({
-          top: e.pageY + 10 + 'px',
-          left: e.pageX + 10 + 'px',
-          display: 'block'
-        }).html('See maps');
+      const cursorText = $('#cursor-text');
+      const cursorWidth = cursorText.outerWidth();
+      const cursorHeight = cursorText.outerHeight();
+      const pageWidth = $(window).width();
+      const pageHeight = $(window).height();
+
+      const offset = 0; // sedikit jarak dari kursor
+      let left = e.pageX + offset;
+      let top = e.pageY + offset; // default: di bawah kursor
+
+      // Jika terlalu dekat ujung kanan layar, geser tooltip ke kiri dari kursor
+      if (e.pageX + cursorWidth + offset > pageWidth) {
+        left = e.pageX - cursorWidth - offset;
+      }
+
+      // Jika terlalu dekat ujung bawah layar, tampilkan di atas kursor
+      if (e.pageY + cursorHeight + offset > pageHeight) {
+        top = e.pageY - cursorHeight - offset + 50;
+      }
+
+      cursorText.css({
+        top: top + 'px',
+        left: left + 'px',
+        display: 'block'
+      }).html('See maps');
     });
+    
     $('.foot-loct').on('mouseleave', function() {
       $('#cursor-text').hide();
     });
+    
+    
 
-    $('.fd-item').on('mousemove', function(e) {
-      $('#cursor-text')
-        .css({
-          top: e.pageY + 10 + 'px',
-          left: e.pageX + 10 + 'px',
-          display: 'block'
-        }).html('See details');
+    $('.fd-wrap .fd-item').on('mousemove', function(e) {
+      const cursorText = $('#cursor-text');
+      const cursorWidth = cursorText.outerWidth();
+      const cursorHeight = cursorText.outerHeight();
+      const pageWidth = $(window).width();
+      const pageHeight = $(window).height();
+
+      const offset = 0; // sedikit jarak dari kursor
+      let left = e.pageX + offset;
+      let top = e.pageY + offset; // default: di bawah kursor
+
+      // Jika terlalu dekat ujung kanan layar, geser tooltip ke kiri dari kursor
+      if (e.pageX + cursorWidth + offset > pageWidth) {
+        left = e.pageX - cursorWidth - offset;
+      }
+
+      // Jika terlalu dekat ujung bawah layar, tampilkan di atas kursor
+      if (e.pageY + cursorHeight + offset > pageHeight) {
+        top = e.pageY - cursorHeight - offset + 50;
+      }
+
+      cursorText.css({
+        top: top + 'px',
+        left: left + 'px',
+        display: 'block'
+      }).html('See details');
     });
     $('.fd-item').on('mouseleave', function() {
+      $('#cursor-text').hide();
+    });
+
+    $('.projectSwiper .swiper-slide').on('mousemove', function(e) {
+      const cursorText = $('#cursor-text');
+      const cursorWidth = cursorText.outerWidth();
+      const cursorHeight = cursorText.outerHeight();
+      const pageWidth = $(window).width();
+      const pageHeight = $(window).height();
+
+      const offset = 0; // sedikit jarak dari kursor
+      let left = e.pageX + offset;
+      let top = e.pageY + offset; // default: di bawah kursor
+
+      // Jika terlalu dekat ujung kanan layar, geser tooltip ke kiri dari kursor
+      if (e.pageX + cursorWidth + offset > pageWidth) {
+        left = e.pageX - cursorWidth - offset;
+      }
+
+      // Jika terlalu dekat ujung bawah layar, tampilkan di atas kursor
+      if (e.pageY + cursorHeight + offset > pageHeight) {
+        top = e.pageY - cursorHeight - offset + 50;
+      }
+
+      cursorText.css({
+        top: top + 'px',
+        left: left + 'px',
+        display: 'block'
+      }).html('See details');
+    });
+    $('.projectSwiper .swiper-slide').on('mouseleave', function() {
       $('#cursor-text').hide();
     });
     
