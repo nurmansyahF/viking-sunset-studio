@@ -241,7 +241,10 @@ h1{
     }
 }
 
-
+section[class*="-masthead"]{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
 
 
 
@@ -1306,9 +1309,9 @@ article p:not(:last-child){
 .fd-wrap .fd-item .container{
     border-top: 1px solid #FF7324;
 }
-/* .fd-wrap .fd-item:last-child{
+.fd-wrap .fd-item:last-child{
     border-bottom: 1px solid #FF7324;
-} */
+}
 
 .evpoSwiper{
     padding: 24px 0;

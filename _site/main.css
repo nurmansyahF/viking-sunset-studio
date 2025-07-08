@@ -741,6 +741,10 @@ video {
   margin-top: -6px;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1225,6 +1229,14 @@ video {
   padding-top: 208px;
 }
 
+.pt-\[72px\] {
+  padding-top: 72px;
+}
+
+.pt-\[156px\] {
+  padding-top: 156px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1293,6 +1305,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .font-bold {

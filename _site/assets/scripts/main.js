@@ -182,18 +182,26 @@ $(document).ready(function() {
     // Inisialisasi Swiper setelah slide mencukupi
 
   // 1) Inisialisasi Lenis untuk smooth scroll
-  const lenis = new Lenis({
-    // duration: 1.2,
-    // smooth: true,
-    // // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // custom easing
-    // autoRaf: true
+  // const lenis = new Lenis({
+  //   // duration: 1.2,
+  //   smooth: true,
+  //   // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // custom easing
+  //   autoRaf: false
+  // });
+  // function raf(time) {
+  //   lenis.raf(time);
+  //   requestAnimationFrame(raf);
+  // }
+  // let leniscount = 0;
+  // requestAnimationFrame(raf);
+  const lenis = new Lenis();
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000); // Convert time from seconds to milliseconds
   });
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  let leniscount = 0;
-  requestAnimationFrame(raf);
+
+  // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+  gsap.ticker.lagSmoothing(0);
 
 
   // 7) Animated text via GSAP/ScrollTrigger
