@@ -652,6 +652,10 @@ video {
   top: 1.5rem;
 }
 
+.bottom-\[-570px\] {
+  bottom: -570px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1564,6 +1568,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:bottom-\[-570px\] {
+    bottom: -570px;
+  }
+
   .lg\:mb-\[120px\] {
     margin-bottom: 120px;
   }
@@ -1660,6 +1668,14 @@ video {
 
   .lg\:pt-\[212px\] {
     padding-top: 212px;
+  }
+
+  .lg\:pt-44 {
+    padding-top: 11rem;
+  }
+
+  .lg\:pt-\[372px\] {
+    padding-top: 372px;
   }
 
   .lg\:text-2xl {
