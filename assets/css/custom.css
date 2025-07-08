@@ -118,6 +118,7 @@ h1{
 .main-menu .mainmenu-top .lang {
     display: flex;
     align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 .main-menu .mainmenu-top .lang a{
     padding: 8px 16px;
@@ -134,7 +135,7 @@ h1{
     opacity: 1;
 }
 .main-menu .mainmenu-top .lang a:not(:first-child){
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
 }
 .main-menu .mainmenu-top .sosmed{
     display: flex;
@@ -245,10 +246,10 @@ h1{
     }
 }
 
-section[class*="-masthead"]{
+/* section[class*="-masthead"]:not(.equipment){
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-}
+} */
 
 
 
@@ -1559,6 +1560,29 @@ article p:not(:last-child){
 }
 
 
+
+@media (width: 1024px) {
+    .lg\:text-7xl {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    .lg\:px-0 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 1023px) {
+    .lg\:text-\[50px\] {
+        font-size: 42px;
+    }
+}
+@media (max-width: 765px) {
+    .lg\:text-\[50px\] {
+        font-size: 28px;
+    }
+}
+
+
 /* Responsive Macbook */
 @media only screen and (max-width: 1500px){
     .about-masthead .content > div{
@@ -1665,6 +1689,11 @@ article p:not(:last-child){
         opacity: 0;
     }
 
+    .btn-play .ic{
+        width: 40px;
+        height: 40px;
+    }
+
     .projectSwiper .swiper-slide{
         padding-top: 70%;
     }
@@ -1718,6 +1747,10 @@ article p:not(:last-child){
     }
 
 
+    .people-wrap .col.voidcard{
+        display: none;
+    }
+
     .services-list .fd-item{
         display: block;
     }
@@ -1744,6 +1777,16 @@ article p:not(:last-child){
     }
     .services-list .fd-item .right img{
         height: 40vh;
+    }
+
+    .ourwork-documentary .fd-wrap .fd-item .text{
+        flex: 0 0 calc(100% - 222px);
+    }
+
+    .ourwork-documentary .fd-item ul li span{
+        font-size: 18px;
+        flex: 0 0 calc(100% - 30px);
+        max-width: calc(100% - 30px);
     }
 
     
@@ -1928,6 +1971,12 @@ article p:not(:last-child){
     }
     .people-wrap .creative-force ul{
         text-align: left;
+    }
+
+
+    .ourwork-documentary .fd-wrap .fd-item .text{
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .footer-locations a:first-child{
