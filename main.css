@@ -1312,6 +1312,10 @@ video {
   line-height: 1;
 }
 
+.text-\[8\.2vw\] {
+  font-size: 8.2vw;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1372,6 +1376,10 @@ video {
   line-height: 40px;
 }
 
+.leading-\[1em\] {
+  line-height: 1em;
+}
+
 .tracking-\[-0\.02em\] {
   letter-spacing: -0.02em;
 }
@@ -1382,6 +1390,10 @@ video {
 
 .tracking-\[-0\.06em\] {
   letter-spacing: -0.06em;
+}
+
+.tracking-\[-0\.03em\] {
+  letter-spacing: -0.03em;
 }
 
 .text-\[\#211C1C\] {
