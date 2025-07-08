@@ -1875,7 +1875,7 @@ article p:not(:last-child){
         display: none;
     }
     .people-wrap .col:not(:last-child){
-        margin-bottom: 16px;
+        margin-bottom: 24px;
     }
     .people-wrap .content{
         padding-left: 0;
