@@ -1532,6 +1532,11 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pt-\[188px\] {
     padding-top: 188px;
   }
@@ -1732,6 +1737,11 @@ video {
   .lg\:py-\[160px\] {
     padding-top: 160px;
     padding-bottom: 160px;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pt-\[212px\] {
