@@ -1317,6 +1317,8 @@ article p:not(:last-child){
     border-bottom: 1px solid #FF7324;
 }
 
+
+
 .evpoSwiper{
     padding: 24px 0;
 }
@@ -1386,6 +1388,14 @@ article p:not(:last-child){
     opacity: 1;
     visibility: visible;
 }
+
+.services-list .fd-item:first-child{
+    padding-top: 0;
+}
+.services-list .fd-item:last-child{
+    border-bottom: 1px solid #FFFFFF26;
+}
+
 
 .accordion-item.active{
     border-color: #FF7324;
@@ -1706,6 +1716,37 @@ article p:not(:last-child){
     .location-detail.popup h2{
         font-size: 32px;
     }
+
+
+    .services-list .fd-item{
+        display: block;
+    }
+    .services-list .fd-item .left,
+    .services-list .fd-item .right{
+        width: 100%;
+    }
+    .services-list .fd-item .left{
+        margin-bottom: 24px;
+    }
+    .services-list .fd-item .left .content{
+        display: block;
+    }
+    .services-list .fd-item .left .content .text{
+        width: 100% !important;
+    }
+    .services-list .fd-item .left .content .number{
+        margin-bottom: 16px;
+    }
+    .services-list .fd-item .left .content ul li span{
+        font-size: 18px;
+        flex: 0 0 calc(100% - 30px);
+        max-width: calc(100% - 30px);
+    }
+    .services-list .fd-item .right img{
+        height: 40vh;
+    }
+
+    
 }
 /* Responsive Mobile*/
 @media only screen and (max-width: 500px) {
@@ -1713,7 +1754,7 @@ article p:not(:last-child){
         padding-top: 64px !important;
         padding-bottom: 64px !important;
     }
-    .content{
+    .container{
         padding-left: 20px;
         padding-right: 20px;
     }
