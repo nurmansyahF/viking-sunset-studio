@@ -1572,6 +1572,10 @@ video {
     bottom: -570px;
   }
 
+  .lg\:bottom-0 {
+    bottom: 0px;
+  }
+
   .lg\:mb-\[120px\] {
     margin-bottom: 120px;
   }
@@ -1594,6 +1598,22 @@ video {
 
   .lg\:ml-\[-120px\] {
     margin-left: -120px;
+  }
+
+  .lg\:mb-\[-160px\] {
+    margin-bottom: -160px;
+  }
+
+  .lg\:mb-\[-280px\] {
+    margin-bottom: -280px;
+  }
+
+  .lg\:mb-\[-240px\] {
+    margin-bottom: -240px;
+  }
+
+  .lg\:mb-\[-260px\] {
+    margin-bottom: -260px;
   }
 
   .lg\:max-h-\[400px\] {
