@@ -1868,11 +1868,16 @@ article p:not(:last-child){
     }
     
     .people-wrap{
-        grid-template-columns: repeat(1, 1fr)
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+    .people-wrap .col:not(:last-child){
+        margin-bottom: 16px;
     }
     .people-wrap .content{
         padding-left: 0;
         padding-right: 0;
+        margin-top: 16px;
     }
     .people-wrap .creative-force h2{
         margin-bottom: 24px;
