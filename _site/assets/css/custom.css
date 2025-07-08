@@ -1729,6 +1729,8 @@ article p:not(:last-child){
 
     .homepage-masthead .content{
         padding-top: 124px;
+        padding-left: 0;
+        padding-right: 0;
     }
     .section-two .container{
         height: 100vh;
@@ -1908,6 +1910,7 @@ article p:not(:last-child){
     }
     .footer-bottom .left h3{
         font-size: 18px;
+        margin-bottom: 40px;
     }
 }
 
