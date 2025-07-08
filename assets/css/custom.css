@@ -1871,6 +1871,9 @@ article p:not(:last-child){
         grid-template-columns: repeat(1, 1fr);
         gap: 0;
     }
+    .people-wrap .col.voidcard{
+        display: none;
+    }
     .people-wrap .col:not(:last-child){
         margin-bottom: 16px;
     }
