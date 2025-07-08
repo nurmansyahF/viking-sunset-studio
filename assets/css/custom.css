@@ -157,6 +157,10 @@ h1{
     color: #e64351;
 }
 
+.header.fixed .nav-main a.active{
+    border-bottom: 1px solid #e64351;
+}
+
 .main-menu .nav-main a{
     padding: 16px;
     text-transform: uppercase;
