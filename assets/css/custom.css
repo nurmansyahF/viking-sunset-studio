@@ -80,6 +80,10 @@ h1,h2,h3,h4,h5{letter-spacing: -0.04em;}
     backdrop-filter: blur(1px);
     transition: all .3s ease-in-out;
 }
+h1{
+    font-size: 72px;
+    line-height: 1.2em;
+}
 .header.show{
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -1536,6 +1540,15 @@ article p:not(:last-child){
     height: 480px;
     object-fit: cover;
 }
+
+
+/* Responsive Macbook */
+@media only screen and (max-width: 1500px){
+    .about-masthead .content > div{
+        margin-top: 72px;
+    }
+}
+
 /* Responsive Tablet*/
 @media only screen and (max-width: 1024px) {
     .text-80{
@@ -1689,9 +1702,13 @@ article p:not(:last-child){
 }
 /* Responsive Mobile*/
 @media only screen and (max-width: 500px) {
-    section:not([class*="pt-"]):not(.p-5):not(.homepage-masthead){
+    section:not([class*="pt-"]):not(.p-5):not(.homepage-masthead):not([class*="-masthead"]):not(.about-ttb){
         padding-top: 64px !important;
         padding-bottom: 64px !important;
+    }
+    .content{
+        padding-left: 20px;
+        padding-right: 20px;
     }
     h2.text-2xl{
         font-size: 28px;
@@ -1822,6 +1839,39 @@ article p:not(:last-child){
         padding-top: 64px;
         padding-bottom: 64px;
     }
+    .about-masthead .masthead-img{
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+    }
+    .about-masthead .content p{
+        font-size: 20px;
+    }
+    .about-masthead .content > div{
+        margin-top: 80px;
+    }
+
+    .bigtext-marquee span{
+        font-size: 80px;
+    }
+
+    .about-pioneeer{
+        padding: 0 20px;
+    }
+    
+    .people-wrap{
+        grid-template-columns: repeat(1, 1fr)
+    }
+    .people-wrap .content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .people-wrap .creative-force h2{
+        margin-bottom: 24px;
+    }
+    .people-wrap .creative-force ul{
+        text-align: left;
+    }
+
     .footer-locations a:first-child{
         padding-top: 0;
     }

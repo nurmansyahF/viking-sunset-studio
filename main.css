@@ -632,12 +632,16 @@ video {
   right: 1.25rem;
 }
 
-.right-\[-50vw\] {
-  right: -50vw;
+.right-\[-66\.666667vw\] {
+  right: -66.666667vw;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-16 {
+  top: 4rem;
 }
 
 .top-32 {
@@ -646,14 +650,6 @@ video {
 
 .top-6 {
   top: 1.5rem;
-}
-
-.right-\[-66\.666667vw\] {
-  right: -66.666667vw;
-}
-
-.top-16 {
-  top: 4rem;
 }
 
 .z-10 {
@@ -877,24 +873,12 @@ video {
   width: 100%;
 }
 
-.min-w-\[200px\] {
-  min-width: 200px;
-}
-
 .max-w-\[440px\] {
   max-width: 440px;
 }
 
 .max-w-\[560px\] {
   max-width: 560px;
-}
-
-.max-w-\[680px\] {
-  max-width: 680px;
-}
-
-.max-w-\[800px\] {
-  max-width: 800px;
 }
 
 .max-w-\[920px\] {
@@ -1221,6 +1205,10 @@ video {
   padding-top: 2.5rem;
 }
 
+.pt-16 {
+  padding-top: 4rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -1235,10 +1223,6 @@ video {
 
 .pt-\[208px\] {
   padding-top: 208px;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .text-center {
@@ -1304,11 +1288,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .text-4xl {
@@ -1524,14 +1503,6 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:pt-\[120px\] {
-    padding-top: 120px;
-  }
-
-  .md\:pt-\[208px\] {
-    padding-top: 208px;
-  }
-
   .md\:pt-\[188px\] {
     padding-top: 188px;
   }
@@ -1544,8 +1515,9 @@ video {
     text-indent: 60px;
   }
 
-  .md\:text-80 {
-    font-size: 5rem;
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 
   .md\:text-\[22px\] {
@@ -1567,11 +1539,6 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
   }
 }
 
@@ -1600,16 +1567,28 @@ video {
     margin-top: 45px;
   }
 
+  .lg\:mt-\[75px\] {
+    margin-top: 75px;
+  }
+
+  .lg\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .lg\:mt-\[72px\] {
+    margin-top: 72px;
+  }
+
   .lg\:max-h-\[400px\] {
     max-height: 400px;
   }
 
-  .lg\:w-\[160px\] {
-    width: 160px;
-  }
-
   .lg\:w-9\/12 {
     width: 75%;
+  }
+
+  .lg\:w-\[160px\] {
+    width: 160px;
   }
 
   .lg\:max-w-\[1160px\] {
@@ -1670,10 +1649,6 @@ video {
     padding-bottom: 160px;
   }
 
-  .lg\:pt-\[120px\] {
-    padding-top: 120px;
-  }
-
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1699,11 +1674,7 @@ video {
     font-size: 80px;
   }
 
-  .lg\:text-\[64px\] {
-    font-size: 64px;
-  }
-
-  .lg\:leading-\[1\.5em\] {
-    line-height: 1.5em;
+  .lg\:text-\[72px\] {
+    font-size: 72px;
   }
 }

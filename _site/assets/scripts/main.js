@@ -22,6 +22,7 @@ $(document).ready(function() {
     //     // }
     //     lastScroll = scroll;
     // });
+    
     jQuery(window).on('scroll', function() {
       var scrollPos = jQuery(this).scrollTop();
       
@@ -71,6 +72,7 @@ $(document).ready(function() {
         // && rect.right <= ($(window).width())
       );
     }
+
     if($('.about-counter').length > 0){
       function animateCount($el, start, end, duration = 2000) {
           let startTime = null;
@@ -181,10 +183,10 @@ $(document).ready(function() {
 
   // 1) Inisialisasi Lenis untuk smooth scroll
   const lenis = new Lenis({
-    duration: 1.2,
-    smooth: true,
-    // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // custom easing
-    autoRaf: true
+    // duration: 1.2,
+    // smooth: true,
+    // // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // custom easing
+    // autoRaf: true
   });
   function raf(time) {
     lenis.raf(time);
@@ -278,9 +280,17 @@ $(document).ready(function() {
       var scrollProgress = scrollY / maxScroll;
   
       // Rentang ukuran mask: dari 20% (min) sampai 100% (max)
-      var minSize = 48.3;
-      var minHSize = 48.3;
-      var maxSize = 100;
+      if (window.innerWidth <= 768) {
+        // Nilai untuk mobile
+        minSize = 100;
+        minHSize = 50;
+        maxSize = 110;
+      } else {
+        // Nilai untuk desktop
+        minSize = 48.3;
+        minHSize = 48.3;
+        maxSize = 100;
+      }
       var currentSize = minSize + (maxSize - minSize) * scrollProgress * 38;
       var currentSizeH = minHSize + (maxSize - minHSize) * scrollProgress * 38;  
       // Terapkan CSS mask-size secara dinamis

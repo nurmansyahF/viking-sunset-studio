@@ -13,6 +13,9 @@ module.exports = {
         fontSize: {
             '80': '5rem'
         },
+        fontSize: {
+            '64': '4em'
+        },
         textIndent: {
           '0': '0',
           'sm': '1em',
