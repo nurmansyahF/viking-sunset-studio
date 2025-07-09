@@ -162,7 +162,11 @@ $(document).ready(function() {
         initialSlide: 2,
         spaceBetween: 24,
         centeredSlides: true,
-        loop: true
+        loop: true,      
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
       };
       console.log($slides.length)
   

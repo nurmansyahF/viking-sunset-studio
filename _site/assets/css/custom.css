@@ -1390,6 +1390,32 @@ article p:not(:last-child){
     visibility: visible;
 }
 
+
+.evpoSwiper .swiper-button-next,
+.evpoSwiper .swiper-button-prev{
+    width: 56px;
+    height: 40px;
+    background-color: #F9F9F9;
+    background-image: url(../images/ic-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #11111140;
+    transition: all .3s ease-in-out;
+}
+.evpoSwiper .swiper-button-next:hover{
+    transform: scaleX(-1) translateX(4px);
+}
+.evpoSwiper .swiper-button-next{
+    transform: scaleX(-1);
+}
+.evpoSwiper .swiper-button-prev:hover{
+    transform: translateX(-4px);
+}
+.evpoSwiper .swiper-button-next::after,
+.evpoSwiper .swiper-button-prev::after{
+    display: none;
+}
+
 .services-list .fd-item:first-child{
     padding-top: 0;
 }
@@ -1484,6 +1510,10 @@ article p:not(:last-child){
     transform: translateX(-5%);
     opacity: 0;
     transition: all .3s ease-in-out;
+}
+
+.filmfund-content .thumbnail img{
+    width: 100%;
 }
 
 .filmfund-content article p{
