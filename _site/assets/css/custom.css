@@ -1790,6 +1790,7 @@ article p:not(:last-child){
     }
 
     
+    
 }
 /* Responsive Mobile*/
 @media only screen and (max-width: 500px) {
@@ -1984,6 +1985,43 @@ article p:not(:last-child){
         width: 50%;
     }
 
+
+    .services-list .accordion-item .accordion-toggle{
+        flex-wrap: wrap;
+    }
+    .services-list .accordion-item .accordion-toggle h3{
+        flex-wrap: wrap;
+    }
+    .services-list .accordion-item .accordion-toggle .number{
+        order: 1;
+    }
+    .services-list .accordion-item .accordion-toggle .btn-expnd{
+        order: 2;
+    }
+    .services-list .accordion-item .accordion-toggle h3{
+        order: 3;
+    }
+    .services-list .accordion-item .content {
+        flex-wrap: wrap;
+    }
+    .services-list .accordion-item .content .col{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .pp-wrap .pp-item .photo{
+        padding: 20px;
+    }
+    .pp-wrap .pp-item .photo img{
+        width: 32px;
+        height: 32px;
+    }
+
+
+    footer .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
     .footer-locations a:first-child{
         padding-top: 0;
     }
