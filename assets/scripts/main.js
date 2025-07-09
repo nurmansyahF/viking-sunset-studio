@@ -164,8 +164,8 @@ $(document).ready(function() {
         centeredSlides: true,
         loop: true,      
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".evpoSwiper .swiper-button-next",
+          prevEl: ".evpoSwiper .swiper-button-prev",
         },
       };
       console.log($slides.length)
