@@ -1797,6 +1797,8 @@ article p:not(:last-child){
         height: 40vh;
     }
     
+    
+
     .ourwork-documentary .fd-wrap .fd-item .text{
         flex: 0 0 calc(100% - 222px);
     }
@@ -2033,6 +2035,13 @@ article p:not(:last-child){
     .pp-wrap .pp-item .photo img{
         width: 32px;
         height: 32px;
+    }
+
+    .more-blog-wrap .grid{
+        gap: 0;
+    }
+    .more-blog-wrap .blog-item:not(:last-child){
+        margin-bottom: 24px;
     }
 
 
