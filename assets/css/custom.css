@@ -1778,7 +1778,7 @@ article p:not(:last-child){
     .services-list .fd-item .right img{
         height: 40vh;
     }
-
+    
     .ourwork-documentary .fd-wrap .fd-item .text{
         flex: 0 0 calc(100% - 222px);
     }
@@ -1972,11 +1972,16 @@ article p:not(:last-child){
     .people-wrap .creative-force ul{
         text-align: left;
     }
+    
 
 
     .ourwork-documentary .fd-wrap .fd-item .text{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .ourwork-documentary .fd-wrap .fd-item .thumbnail{
+        width: 50%;
     }
 
     .footer-locations a:first-child{
