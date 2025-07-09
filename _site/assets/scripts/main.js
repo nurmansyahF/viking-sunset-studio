@@ -622,18 +622,22 @@ $(document).ready(function() {
       const $thisItem = $(this).closest('.accordion-item');
       const $thisContent = $thisItem.find('.accordion-content');
       const $t = $(this);
-      
-      $('.accordion-toggle').removeClass('active')
-      $t.addClass('active')
-      $thisItem.find('.btn-expnd').html('[ - ]')
-      // Tutup semua konten
-      $('.accordion-content').not($thisContent).slideUp();
-      $('.accordion-item').not($thisItem).removeClass('active').find('.btn-expnd').html('[ + ]');
-
-      // Toggle konten saat ini
-      $thisContent.slideToggle();
-      $thisItem.toggleClass('active');
+      const isOpen = $thisContent.is(':visible');
+    
+      // Tutup semua konten & reset
+      $('.accordion-content').slideUp();
+      $('.accordion-item').removeClass('active').find('.btn-expnd').html('[ + ]');
+      $('.accordion-toggle').removeClass('active');
+    
+      if (!isOpen) {
+        // Buka konten yang diklik
+        $thisContent.slideDown();
+        $thisItem.addClass('active');
+        $t.addClass('active');
+        $thisItem.find('.btn-expnd').html('[ - ]');
+      }
     });
+    
 
     $('.pp-wrap .pp-item').each(function(){
       const $this = $(this);
