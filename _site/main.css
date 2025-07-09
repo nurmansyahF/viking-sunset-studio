@@ -1566,12 +1566,21 @@ video {
     max-width: 90%;
   }
 
+  .md\:columns-2 {
+    -moz-columns: 2;
+         columns: 2;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
   }
 
   .md\:pt-\[188px\] {
