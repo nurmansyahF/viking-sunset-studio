@@ -1576,7 +1576,6 @@ article p:not(:last-child){
     letter-spacing: -0.04em;
     margin-bottom: 16px;
     font-weight: 600;
-    font-family: 'Instrument Sans Condensed';
 }
 .single-blog-content article p + h3{
     margin-top: 64px;
