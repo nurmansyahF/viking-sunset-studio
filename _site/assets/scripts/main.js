@@ -158,7 +158,6 @@ $(document).ready(function() {
       let t = $(this);
       let $slides = $(this).find(".swiper-slide");
       const swiperConfig = {
-        slidesPerView: 2.5,
         initialSlide: 2,
         spaceBetween: 24,
         centeredSlides: true,
@@ -166,6 +165,17 @@ $(document).ready(function() {
         navigation: {
           nextEl: ".evpoSwiper .swiper-button-next",
           prevEl: ".evpoSwiper .swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.3
+          },
+          501: {
+            slidesPerView: 1.3
+          },
+          1025: {
+            slidesPerView: 2.5
+          }
         },
       };
       console.log($slides.length)

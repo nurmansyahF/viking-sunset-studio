@@ -1826,7 +1826,8 @@ article p:not(:last-child){
     .services-list .fd-item .right img{
         height: 40vh;
     }
-    
+
+       
     
 
     .ourwork-documentary .fd-wrap .fd-item .text{
@@ -1837,6 +1838,10 @@ article p:not(:last-child){
         font-size: 18px;
         flex: 0 0 calc(100% - 30px);
         max-width: calc(100% - 30px);
+    }
+
+    .evpoSwiper .swiper-slide .box-yt{
+        padding: 8px;
     }
 
     
@@ -2041,6 +2046,9 @@ article p:not(:last-child){
     }
     .services-list .accordion-item .accordion-toggle h3{
         flex-wrap: wrap;
+        flex: 0 0 100%;
+        max-width: 100%;
+        font-size: 28px;
     }
     .services-list .accordion-item .accordion-toggle .number{
         order: 1;
@@ -2066,12 +2074,27 @@ article p:not(:last-child){
         width: 32px;
         height: 32px;
     }
+    .pp-item.active .photo u{
+        border-width: 2px;
+    }
 
     .more-blog-wrap .grid{
         gap: 0;
     }
     .more-blog-wrap .blog-item:not(:last-child){
         margin-bottom: 24px;
+    }
+
+    .ourwork-evpo .flex.gap-1{
+        justify-content: center;
+    }
+
+    .evpoSwiper .box-yt iframe{
+        min-height: 180px;
+    }
+    .evpoSwiper .swiper-button-next, .evpoSwiper .swiper-button-prev {
+        width: 40px;
+        height: 32px;
     }
 
 
@@ -2110,6 +2133,7 @@ article p:not(:last-child){
         font-size: 18px;
         margin-bottom: 40px;
     }
+    
 }
 
 #cursor-text {
