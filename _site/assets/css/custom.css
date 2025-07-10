@@ -1699,6 +1699,12 @@ article p:not(:last-child){
         transition: all .3s ease-in-out;
         padding: 24px 0;
     }
+    .nav-main a{
+        border-bottom: 0 !important;
+    }
+    .nav-main a.active{
+        color: #E64351;
+    }
     .nav-main a:not(.btn-primary){
         max-width: max-content;
     }
@@ -2030,7 +2036,6 @@ article p:not(:last-child){
     }
     
 
-
     .ourwork-documentary .fd-wrap .fd-item .text{
         flex: 0 0 100%;
         max-width: 100%;
@@ -2039,16 +2044,57 @@ article p:not(:last-child){
     .ourwork-documentary .fd-wrap .fd-item .thumbnail{
         width: 50%;
     }
+    .ourwork-masthead.ourwork-detail .container & > .flex{
+        flex-wrap: wrap;
+    }
+    
+    .work-thumbnail .box-youtube{
+        padding-top: 75% !important;
+    }
 
+    .ourwork-masthead.ourwork-detail .left,
+    .ourwork-masthead.ourwork-detail .right{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .ourwork-masthead.ourwork-detail .left .cover img{
+        max-height: 300px;
+        margin: 0 auto 32px;
+    }
+    .ourwork-masthead.ourwork-detail .right .content,
+    .ourwork-masthead.ourwork-detail .right .meta{
+        padding: 0;
+    }
+    .ourwork-masthead.ourwork-detail .right .meta{
+        font-size: 18px;
+    }
 
     .services-list .accordion-item .accordion-toggle{
         flex-wrap: wrap;
+    }
+    .services-list .accordion-item .accordion-toggle.pb-20{
+        padding-bottom: 40px;
+    }
+    .services-list .accordion-item .accordion-toggle.py-20{
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     .services-list .accordion-item .accordion-toggle h3{
         flex-wrap: wrap;
         flex: 0 0 100%;
         max-width: 100%;
         font-size: 28px;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .services-list .accordion-item .content{
+        padding: 0;
+        margin-left: 8px;
+        margin-right: 8px;
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        gap: 0;
     }
     .services-list .accordion-item .accordion-toggle .number{
         order: 1;
