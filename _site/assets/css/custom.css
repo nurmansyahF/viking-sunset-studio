@@ -2143,6 +2143,11 @@ article p:not(:last-child){
         height: 32px;
     }
 
+    article p{
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
 
     footer .container{
         padding-left: 0;
