@@ -1874,7 +1874,7 @@ article p:not(:last-child){
 }
 /* Responsive Mobile*/
 @media only screen and (max-width: 500px) {
-    section:not([class*="pt-"]):not(.p-5):not(.homepage-masthead):not([class*="-masthead"]):not(.about-ttb){
+    section:not([class*="pt-"]):not(.p-5):not(.homepage-masthead):not([class*="-masthead"]):not(.about-ttb):not(.location-detail){
         padding-top: 64px !important;
         padding-bottom: 64px !important;
     }
@@ -1914,6 +1914,21 @@ article p:not(:last-child){
     }
     .home-location .pointing::before{
         font-size: 18px;
+    }
+    .location-detail .container{
+        /* min-height: 50vh; */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .location-detail .top{
+        margin-top: 24px;
+    }
+    .location-detail .ldSwiper {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .location-detail .ldSwiper .swiper-slide {
+        padding-top: 75%;
     }
 
     .section-three h2,
