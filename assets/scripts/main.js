@@ -132,25 +132,89 @@ $(document).ready(function() {
         prevEl: ".swiper-button-prev",
       },
     });
-    const ldSwiper = new Swiper(".ldSwiper", {
-      slidesPerView: 1.2,
-      spaceBetween: 40,
-      breakpoints: {
-        0: {
-          spaceBetween: 16,
+    
+    // const ldSwiper = new Swiper(".ldSwiper", {
+    //   slidesPerView: 1.2,
+    //   spaceBetween: 40,
+    //   breakpoints: {
+    //     0: {
+    //       spaceBetween: 16,
+    //     },
+    //     501: {
+    //       spaceBetween: 24,
+    //     },
+    //     1025: {
+    //       spaceBetween: 40,
+    //     }
+    //   },
+    //   navigation: {
+    //     nextEl: ".ld-button-next",
+    //     prevEl: ".ld-button-prev",
+    //   },
+    // });
+
+    // $('.ldSwiper').each(function () {
+    //   const $slider = $(this);
+    //   const $nextBtn = $slider.find('.ld-button-next');
+    //   const $prevBtn = $slider.find('.ld-button-prev');
+    //   new Swiper($slider[0], {
+    //     slidesPerView: 1.2,
+    //     spaceBetween: 40,
+    //     breakpoints: {
+    //       0: {
+    //         spaceBetween: 16,
+    //       },
+    //       501: {
+    //         spaceBetween: 24,
+    //       },
+    //       1025: {
+    //         spaceBetween: 40,
+    //       },
+    //     },
+    //     navigation: {
+    //       nextEl: $nextBtn[0],
+    //       prevEl: $prevBtn[0],
+    //     },
+    //   });
+    // });
+    const $ldSwiperwrapp = $(".ldSwiper .swiper-wrapper");
+
+    $ldSwiperwrapp.each(function(){
+      let t = $(this);
+      let $slides = $(this).find(".swiper-slide");
+      const swiperConfig = {
+        slidesPerView: 1.2,
+        spaceBetween: 40,
+        loop: true,      
+        navigation: {
+          nextEl: ".ldSwiper .swiper-button-next",
+          prevEl: ".ldSwiper .swiper-button-prev",
         },
-        501: {
-          spaceBetween: 24,
+        breakpoints: {
+          0: {
+            spaceBetween: 16,
+          },
+          501: {
+            spaceBetween: 24,
+          },
+          1025: {
+            spaceBetween: 40,
+          }
         },
-        1025: {
-          spaceBetween: 40,
-        }
-      },
-      navigation: {
-        nextEl: ".ld-button-next",
-        prevEl: ".ld-button-prev",
-      },
-    });
+      };
+      console.log($slides.length)
+  
+      while ($slides.length < 5) {
+        $slides.each(function () {
+          const $clone = $(this).clone();
+          t.append($clone);
+        });
+        $slides = t.find(".swiper-slide");
+      }
+      
+      const ldSwiper = new Swiper(".ldSwiper", swiperConfig);
+    })
+    
 
     const $swiperWrapper = $(".evpoSwiper .swiper-wrapper");
 

@@ -313,7 +313,20 @@ h1{
     left: 4px;
 }
 .location-detail{
-    transition: all .3s esae-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.location-detail .ldSwiper .swiper-slide{
+    width: 100%;
+    padding-top: 48%;
+    position: relative;
+}
+.location-detail .ldSwiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .title-waksen{
@@ -1392,7 +1405,9 @@ article p:not(:last-child){
 
 
 .evpoSwiper .swiper-button-next,
-.evpoSwiper .swiper-button-prev{
+.evpoSwiper .swiper-button-prev,
+.ldSwiper .swiper-button-next,
+.ldSwiper .swiper-button-prev{
     width: 56px;
     height: 40px;
     background-color: #F9F9F9;
@@ -1402,17 +1417,22 @@ article p:not(:last-child){
     border: 1px solid #11111140;
     transition: all .3s ease-in-out;
 }
-.evpoSwiper .swiper-button-next:hover{
+.evpoSwiper .swiper-button-next:hover,
+.ldSwiper .swiper-button-next:hover{
     transform: scaleX(-1) translateX(4px);
 }
-.evpoSwiper .swiper-button-next{
+.evpoSwiper .swiper-button-next,
+.ldSwiper .swiper-button-next{
     transform: scaleX(-1);
 }
-.evpoSwiper .swiper-button-prev:hover{
+.evpoSwiper .swiper-button-prev:hover,
+.ldSwiper .swiper-button-prev:hover{
     transform: translateX(-4px);
 }
 .evpoSwiper .swiper-button-next::after,
-.evpoSwiper .swiper-button-prev::after{
+.evpoSwiper .swiper-button-prev::after,
+.ldSwiper .swiper-button-next::after,
+.ldSwiper .swiper-button-prev::after{
     display: none;
 }
 
