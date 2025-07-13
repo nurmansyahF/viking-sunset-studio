@@ -256,6 +256,23 @@ $(document).ready(function() {
     })
     // Konfigurasi Swiper
     
+    $('.marquee-wrapper').each(function() {
+      var t = $(this),
+          s = t.find('span');
+    
+      if (s.length < 3) {
+        // Ulangi cloning hingga jumlah span mencapai minimal 5
+        while (t.find('span').length < 5) {
+          s.each(function() {
+            if (t.find('span').length >= 5) return false; // Hentikan jika sudah cukup
+            var $clone = $(this).clone();
+            t.append($clone);
+          });
+        }
+      }
+    });
+    
+      
 
     // Inisialisasi Swiper setelah slide mencukupi
 
