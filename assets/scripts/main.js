@@ -644,9 +644,8 @@ $(document).ready(function() {
       $('#cursor-text').hide();
     });
     
-    
 
-    $('.fd-wrap .fd-item').on('mousemove', function(e) {
+    $('.fd-wrap .fd-item .work-heading').on('mousemove', function(e) {
       const cursorText = $('#cursor-text');
       const cursorWidth = cursorText.outerWidth();
       const cursorHeight = cursorText.outerHeight();
@@ -673,9 +672,11 @@ $(document).ready(function() {
         display: 'block'
       }).html('See details');
     });
-    $('.fd-item').on('mouseleave', function() {
+    $('.fd-item .work-heading').on('mouseleave', function() {
       $('#cursor-text').hide();
     });
+
+    
 
     $('.projectSwiper .swiper-slide').on('mousemove', function(e) {
       const cursorText = $('#cursor-text');
@@ -737,6 +738,23 @@ $(document).ready(function() {
         $this.addClass('active')
       })
     })
+    
+
+    let player;
+    function onYouTubeIframeAPIReady(){        // dipanggil otomatis
+      player = new YT.Player('yt-player');     // id sama dengan iframe
+    }
+    $('.iframe-overlay').on('click', function(){
+      if(!player) return;                      // jaga2 API belum siap
+      const state = player.getPlayerState();   // 1 = playing, 2 = paused
+      if(state === YT.PlayerState.PLAYING){
+        player.pauseVideo();
+      }else{
+        player.playVideo();
+      }
+    });
+
+    
 
   }); // end of document ready
   
